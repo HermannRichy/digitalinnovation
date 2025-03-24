@@ -104,10 +104,10 @@ export function ContactForm() {
             </section>
             <section>
                 <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3965.0735978109146!2d2.3297041740450233!3d6.384502724764954!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x102357dc7747f489%3A0x647ad63bdbf3f0d4!2sDigital%20Innovation!5e0!3m2!1sfr!2sbj!4v1742839513536!5m2!1sfr!2sbj"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3965.0735978109146!2d2.3297041740450233!3d6.384502724764954!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x102357dc7747f489%3A0x647ad63bdbf3f3f0d4!2sDigital%20Innovation!5e0!3m2!1sfr!2sbj!4v1742839513536!5m2!1sfr!2sbj"
                     className="w-full h-96"
                     loading="lazy"
-                    referrerpolicy="no-referrer-when-downgrade"
+                    referrerPolicy="no-referrer-when-downgrade" // Correction ici
                 ></iframe>
             </section>
         </>
