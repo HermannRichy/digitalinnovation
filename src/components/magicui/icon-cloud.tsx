@@ -37,7 +37,7 @@ export function IconCloud({ icons, images }: IconCloudProps) {
         startTime: number;
         duration: number;
     } | null>(null);
-    const animationFrameRef = useRef<number>();
+    const animationFrameRef = useRef<number | undefined>(undefined); // FIX: Initial value for animationFrameRef
     const iconCanvasesRef = useRef<HTMLCanvasElement[]>([]);
     const imagesLoadedRef = useRef<boolean[]>([]);
 
