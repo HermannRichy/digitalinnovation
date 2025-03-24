@@ -81,8 +81,8 @@ export function Services() {
                         Application Mobile
                     </h4>
                     <p>
-                        Création d'applications mobiles natives (iOS & Android)
-                        pour une expérience utilisateur optimale.
+                        Création d&apos;applications mobiles natives (iOS &
+                        Android) pour une expérience utilisateur optimale.
                     </p>
                 </div>
 
@@ -123,7 +123,7 @@ export function Services() {
                         UI/UX Design
                     </h4>
                     <p>
-                        Conception d'interfaces utilisateur intuitives et
+                        Conception d&apos;interfaces utilisateur intuitives et
                         expériences utilisateur optimisées pour tous vos
                         supports.
                     </p>

@@ -3,7 +3,6 @@ import { FloatingDock } from "@/src/components/ui/floating-dock";
 import {
     IconMessages,
     IconWriting,
-    IconMoneybag,
     IconHome,
     IconUserCog,
     IconQuestionMark,

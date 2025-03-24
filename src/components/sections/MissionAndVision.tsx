@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 export function MissionAndVision() {
     return (
         <>
@@ -10,13 +12,13 @@ export function MissionAndVision() {
                         Innovation, Numérique.
                     </h2>
                     <p className="text-lg md:text-xl lg:text-2xl font-default text-dark mb-10">
-                        Nous aspirons à créer un monde où l'innovation digitale
-                        permet aux entreprises et aux individus d'atteindre leur
-                        plein potentiel.
+                        Nous aspirons à créer un monde où l&apos;innovation
+                        digitale permet aux entreprises et aux individus
+                        d&apos;atteindre leur plein potentiel.
                     </p>
                 </div>
                 <div className="flex items-center h-full md:justify-center md:w-1/2">
-                    <img
+                    <Image
                         src="/svg-images/project-planning.svg"
                         alt="Equipe Digital Innovation"
                         className="w-full lg:w-3/4 lg:mx-auto lg:h-[400px]"
@@ -38,7 +40,7 @@ export function MissionAndVision() {
                     </p>
                 </div>
                 <div className="flex items-center h-full md:justify-center md:w-1/2">
-                    <img
+                    <Image
                         src="/svg-images/growth.svg"
                         alt="Equipe Digital Innovation"
                         className="w-full lg:w-3/4 lg:mx-auto lg:h-[400px]"

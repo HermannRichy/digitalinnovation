@@ -2,7 +2,6 @@ import {
     IconBrandFacebook,
     IconBrandInstagram,
     IconBrandWhatsapp,
-    IconBrandLinkedin,
     IconBrandTiktok,
 } from "@tabler/icons-react";
 

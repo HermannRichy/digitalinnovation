@@ -17,7 +17,9 @@ export function Footer() {
                             Digital Innovation
                         </h1>
                         <p className="mb-4">Elevons les normes du numérique.</p>
-                        <p className="mb-4">Let's raise digital standars.</p>
+                        <p className="mb-4">
+                            Let&apos;s raise digital standars.
+                        </p>
                         <div className="mt-4 bg-dark text-neon py-4 px-8 rounded-lg w-fit">
                             <p className="mb-4">
                                 <span className="font-semibold">Email :</span>{" "}

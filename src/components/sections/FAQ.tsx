@@ -80,7 +80,7 @@ export function FAQ() {
                 </h3>
                 <Button asChild variant="outline" className="rounded-full">
                     <Link href="/contact">
-                        Plus d'information{" "}
+                        Plus d&apos;information{" "}
                         <LucideArrowRight size={20} className="ml-6 md:ml-10" />
                     </Link>
                 </Button>

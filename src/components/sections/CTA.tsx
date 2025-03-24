@@ -22,9 +22,10 @@ export function CTA() {
                     Prêt à transformer vos idées en succès digital ?
                 </h1>
                 <p className="text-lg md:text-xl lg:text-2xl font-default mb-6">
-                    Faites le premier pas aujourd'hui. Contactez notre équipe
-                    d'experts pour discuter de votre projet et découvrir comment
-                    nous pouvons vous aider à atteindre vos objectifs.
+                    Faites le premier pas aujourd&apos;hui. Contactez notre
+                    équipe d&apos;experts pour discuter de votre projet et
+                    découvrir comment nous pouvons vous aider à atteindre vos
+                    objectifs.
                 </p>
                 <Button asChild variant="outline" className="rounded-full">
                     <Link href="/contact">

@@ -4,6 +4,7 @@ import {
     LucidePencilRuler,
     LucideHandshake,
 } from "lucide-react";
+import Image from "next/image";
 
 const benefits = [
     {
@@ -55,32 +56,32 @@ export function WhyChooseUs() {
                         Des entreprises et entrepreneurs nous font confiance
                     </p>
                     <div className="flex flex-wrap items-center justify-center gap-6">
-                        <img
+                        <Image
                             src="/images/partner1.png"
                             alt="Client 1"
                             className="h-10"
                         />
-                        <img
+                        <Image
                             src="/images/partner7.jpeg"
                             alt="Client 2"
                             className="h-10 hidden md:inline-block"
                         />
-                        <img
+                        <Image
                             src="/images/partner3.png"
                             alt="Client 3"
                             className="h-10"
                         />
-                        <img
+                        <Image
                             src="/images/partner4.png"
                             alt="Client 4"
                             className="h-10"
                         />
-                        <img
+                        <Image
                             src="/images/partner5.jpeg"
                             alt="Client 5"
                             className="h-10 hidden md:inline-block"
                         />
-                        <img
+                        <Image
                             src="/images/partner8.webp"
                             alt="Client 6"
                             className="h-10"

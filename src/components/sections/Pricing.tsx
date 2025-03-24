@@ -1,17 +1,6 @@
 "use client";
 import React from "react";
-import {
-    LucideCheck,
-    LucideShoppingCart,
-    LucideCloud,
-    LucideSmartphone,
-    LucidePencilLine,
-    LucideTrendingUp,
-    LucidePalette,
-    LucidePenTool,
-    LucideSearch,
-    LucideArrowRight,
-} from "lucide-react";
+import { LucideCheck, LucideArrowRight } from "lucide-react";
 import Link from "next/link";
 import { Button } from "@/src/components/ui/button";
 import { Badge } from "@/src/components/ui/badge";

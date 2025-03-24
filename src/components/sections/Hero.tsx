@@ -47,7 +47,7 @@ export function Hero() {
                     </h1>
                     <h3 className="mt-4 max-w-lg text-base lg:text-lg font-normal">
                         Entrepreneurs, TPE, PME, startups SaaS :<br /> on vous
-                        propulse dans l'ère du digitale.
+                        propulse dans l&apos;ère du digitale.
                     </h3>
                     <p className="flex items-center mt-8 gap-x-4">
                         <Button

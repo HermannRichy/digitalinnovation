@@ -154,7 +154,7 @@ export function BlogCards() {
                 ) : null}
             </AnimatePresence>
             <ul className="mx-auto w-full grid grid-cols-1 md:grid-cols-2 items-start gap-4">
-                {cards.map((card, index) => (
+                {cards.map((card) => (
                     <motion.div
                         layoutId={`card-${card.title}-${id}`}
                         key={card.title}
@@ -242,9 +242,9 @@ const cards = [
                     réutilisables et dynamiques pour les applications web
                     modernes. <br /> <br />
                     Découvrez comment démarrer avec React, ses concepts
-                    fondamentaux tels que les composants, les props et l'état,
-                    et pourquoi il est devenu un outil incontournable pour les
-                    développeurs front-end.
+                    fondamentaux tels que les composants, les props et
+                    l&apos;état, et pourquoi il est devenu un outil
+                    incontournable pour les développeurs front-end.
                 </p>
             );
         },
@@ -286,8 +286,8 @@ const cards = [
                     avantages tels que la réduction des coûts et une meilleure
                     sécurité. <br /> <br />
                     Découvrez les tendances actuelles comme le multicloud, le
-                    edge computing et l'IA intégrée aux services cloud dans cet
-                    article.
+                    edge computing et l&apos;IA intégrée aux services cloud dans
+                    cet article.
                 </p>
             );
         },
@@ -301,13 +301,13 @@ const cards = [
         content: () => {
             return (
                 <p>
-                    Avec l'augmentation des cyberattaques, la cybersécurité est
-                    devenue un enjeu crucial pour les entreprises. Protéger vos
-                    données sensibles et celles de vos clients est indispensable
-                    dans un monde numérique en constante évolution. <br />{" "}
-                    <br />
+                    Avec l&apos;augmentation des cyberattaques, la cybersécurité
+                    est devenue un enjeu crucial pour les entreprises. Protéger
+                    vos données sensibles et celles de vos clients est
+                    indispensable dans un monde numérique en constante
+                    évolution. <br /> <br />
                     Apprenez comment mettre en place des mesures efficaces
-                    telles que le chiffrement, l'authentification
+                    telles que le chiffrement, l&apos;authentification
                     multifactorielle et la formation des employés.
                 </p>
             );

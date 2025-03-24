@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 export function AboutWhoWeAre() {
     return (
         <section className="mt-20 lg:mt-40 py-14 px-4 md:px-10 lg:px-24 bg-white">
@@ -29,7 +31,7 @@ export function AboutWhoWeAre() {
                     </div>
                 </div>
                 <div className="mt-12 flex justify-center">
-                    <img
+                    <Image
                         src="/svg-images/analytics.svg"
                         alt="Notre équipe en pleine stratégie"
                         className="w-full h-96"

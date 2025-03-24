@@ -1,11 +1,9 @@
 "use client";
 import React from "react";
 import { LucideMail, LucideSendHorizonal } from "lucide-react";
-import { useTheme } from "next-themes";
 import Link from "next/link";
 
 export function ContactForm() {
-    const theme = useTheme();
     return (
         <>
             <section className="my-20 lg:mt-40 px-4 md:px-10 lg:px-24">
@@ -19,11 +17,11 @@ export function ContactForm() {
                             <LucideMail className="w-6 h-6" />
                         </div>
                         <h4 className="font-semibold text-primary md:text-lg mb-5">
-                            Besoin d'aide ou de conseils ?
+                            Besoin d&apos;aide ou de conseils ?
                         </h4>
-                        <p className="text-neutral-600 dark:text-neutral-400 mb-8">
-                            N'hésitez pas à nous contacter pour toute question
-                            ou demande de devis.
+                        <p className="text-neutral-400 mb-8">
+                            N&apos;hésitez pas à nous contacter pour toute
+                            question ou demande de devis.
                         </p>
                         <div className="space-y-4">
                             <div className="flex items-center gap-3">
@@ -64,7 +62,7 @@ export function ContactForm() {
                         <form className="space-y-5">
                             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                                 <div>
-                                    <label className="block text-sm font-medium mb-2 text-neutral-600 dark:text-neutral-400">
+                                    <label className="block text-sm font-medium mb-2 text-neutral-400">
                                         Nom *
                                     </label>
                                     <input
@@ -74,7 +72,7 @@ export function ContactForm() {
                                     />
                                 </div>
                                 <div>
-                                    <label className="block text-sm font-medium mb-2 text-neutral-600 dark:text-neutral-400">
+                                    <label className="block text-sm font-medium mb-2 text-neutral-400">
                                         Email *
                                     </label>
                                     <input
@@ -85,7 +83,7 @@ export function ContactForm() {
                                 </div>
                             </div>
                             <div>
-                                <label className="block text-sm font-medium mb-2 text-neutral-600 dark:text-neutral-400">
+                                <label className="block text-sm font-medium mb-2 text-neutral-400">
                                     Message *
                                 </label>
                                 <textarea

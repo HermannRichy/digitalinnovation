@@ -8,10 +8,8 @@ import {
     LucideTabletSmartphone,
     LucideRocket,
 } from "lucide-react";
-import { useTheme } from "next-themes";
 
 export function WorkFlow() {
-    const theme = useTheme();
     return (
         <section className="mt-20 lg:mt-40 px-4 md:px-10 lg:px-24">
             <h2 className="font-bold text-primary text-3xl md:text-4xl lg:text-6xl mb-20">
