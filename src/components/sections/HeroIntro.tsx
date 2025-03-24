@@ -1,4 +1,4 @@
-import { motion } from "motion"; // Nouveau nom si renommé
+import { motion } from "motion/react"; // Nouveau nom si renommé
 import {
     IconCode,
     IconSeo,
