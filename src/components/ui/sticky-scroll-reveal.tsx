@@ -4,6 +4,19 @@ import { useMotionValueEvent, useScroll } from "motion/react";
 import { motion } from "motion/react";
 import { cn } from "@/src/lib/utils";
 
+// Déclaration des constantes en dehors du composant
+const backgroundColors = [
+    "#0f172a", // slate-900
+    "#000000", // black
+    "#171717", // neutral-900
+];
+
+const linearGradients = [
+    "linear-gradient(to bottom right, #06b6d4, #10b981)",
+    "linear-gradient(to bottom right, #ec4899, #6366f1)",
+    "linear-gradient(to bottom right, #f97316, #eab308)",
+];
+
 export const StickyScroll = ({
     content,
     contentClassName,
@@ -11,15 +24,13 @@ export const StickyScroll = ({
     content: {
         title: string;
         description: string;
-        content?: React.ReactNode | any;
+        content?: React.ReactNode;
     }[];
     contentClassName?: string;
 }) => {
-    const [activeCard, setActiveCard] = React.useState(0);
-    const ref = useRef<any>(null);
+    const [activeCard, setActiveCard] = useState(0);
+    const ref = useRef<HTMLDivElement>(null); // Correction du type any
     const { scrollYProgress } = useScroll({
-        // uncomment line 22 and comment line 23 if you DONT want the overflow container and want to have it change on the entire page scroll
-        // target: ref
         container: ref,
         offset: ["start start", "end start"],
     });
@@ -30,26 +41,14 @@ export const StickyScroll = ({
         const closestBreakpointIndex = cardsBreakpoints.reduce(
             (acc, breakpoint, index) => {
                 const distance = Math.abs(latest - breakpoint);
-                if (distance < Math.abs(latest - cardsBreakpoints[acc])) {
-                    return index;
-                }
-                return acc;
+                return distance < Math.abs(latest - cardsBreakpoints[acc])
+                    ? index
+                    : acc;
             },
             0
         );
         setActiveCard(closestBreakpointIndex);
     });
-
-    const backgroundColors = [
-        "#0f172a", // slate-900
-        "#000000", // black
-        "#171717", // neutral-900
-    ];
-    const linearGradients = [
-        "linear-gradient(to bottom right, #06b6d4, #10b981)", // cyan-500 to emerald-500
-        "linear-gradient(to bottom right, #ec4899, #6366f1)", // pink-500 to indigo-500
-        "linear-gradient(to bottom right, #f97316, #eab308)", // orange-500 to yellow-500
-    ];
 
     const [backgroundGradient, setBackgroundGradient] = useState(
         linearGradients[0]
@@ -59,7 +58,7 @@ export const StickyScroll = ({
         setBackgroundGradient(
             linearGradients[activeCard % linearGradients.length]
         );
-    }, [activeCard]);
+    }, [activeCard]); // linearGradients est maintenant une constante externe
 
     return (
         <motion.div
@@ -75,9 +74,7 @@ export const StickyScroll = ({
                     {content.map((item, index) => (
                         <div key={item.title + index} className="my-20">
                             <motion.h2
-                                initial={{
-                                    opacity: 0,
-                                }}
+                                initial={{ opacity: 0 }}
                                 animate={{
                                     opacity: activeCard === index ? 1 : 0.3,
                                 }}
@@ -86,9 +83,7 @@ export const StickyScroll = ({
                                 {item.title}
                             </motion.h2>
                             <motion.p
-                                initial={{
-                                    opacity: 0,
-                                }}
+                                initial={{ opacity: 0 }}
                                 animate={{
                                     opacity: activeCard === index ? 1 : 0.3,
                                 }}

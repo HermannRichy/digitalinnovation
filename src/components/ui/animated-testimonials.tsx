@@ -3,7 +3,7 @@
 import { IconArrowLeft, IconArrowRight } from "@tabler/icons-react";
 import { motion, AnimatePresence } from "motion/react";
 import Image from "next/image";
-import { useEffect, useState } from "react";
+import { useEffect, useState, useCallback } from "react"; // Ajout de useCallback
 
 type Testimonial = {
     quote: string;
@@ -11,6 +11,7 @@ type Testimonial = {
     designation: string;
     src: string;
 };
+
 export const AnimatedTestimonials = ({
     testimonials,
     autoplay = false,
@@ -20,26 +21,27 @@ export const AnimatedTestimonials = ({
 }) => {
     const [active, setActive] = useState(0);
 
-    const handleNext = () => {
+    // Mémoïser les fonctions pour éviter les re-rendus inutiles
+    const handleNext = useCallback(() => {
         setActive((prev) => (prev + 1) % testimonials.length);
-    };
+    }, [testimonials.length]);
 
-    const handlePrev = () => {
+    const handlePrev = useCallback(() => {
         setActive(
             (prev) => (prev - 1 + testimonials.length) % testimonials.length
         );
-    };
+    }, [testimonials.length]);
 
-    const isActive = (index: number) => {
-        return index === active;
-    };
+    const isActive = (index: number) => index === active;
 
     useEffect(() => {
         if (autoplay) {
             const interval = setInterval(handleNext, 5000);
             return () => clearInterval(interval);
         }
-    }, [autoplay]);
+    }, [autoplay, handleNext]); // Ajout de handleNext dans les dépendances
+
+    // ... (reste du code inchangé)
 
     const randomRotateY = () => {
         return Math.floor(Math.random() * 21) - 10;
