@@ -13,10 +13,10 @@ export function AboutWhoWeAre() {
                             Une équipe jeune et dynamique
                         </h3>
                         <p>
-                            Digital Innovation, c’est une équipe passionnée qui
-                            fusionne créativité et technologie pour développer
-                            des solutions digitales innovantes adaptées aux
-                            entreprises modernes.
+                            Digital Innovation, c&apos;est une équipe passionnée
+                            qui fusionne créativité et technologie pour
+                            développer des solutions digitales innovantes
+                            adaptées aux entreprises modernes.
                         </p>
                     </div>
                     <div className="bg-dark p-6 rounded-2xl shadow-lg">
@@ -24,9 +24,10 @@ export function AboutWhoWeAre() {
                             Notre approche
                         </h3>
                         <p>
-                            De la stratégie à l’exécution, nous accompagnons nos
-                            clients avec une méthodologie structurée qui allie
-                            innovation, analyse et optimisation continue.
+                            De la stratégie à l&apos;exécution, nous
+                            accompagnons nos clients avec une méthodologie
+                            structurée qui allie innovation, analyse et
+                            optimisation continue.
                         </p>
                     </div>
                 </div>
@@ -34,6 +35,8 @@ export function AboutWhoWeAre() {
                     <Image
                         src="/svg-images/analytics.svg"
                         alt="Notre équipe en pleine stratégie"
+                        width={500}
+                        height={500}
                         className="w-full h-96"
                     />
                 </div>

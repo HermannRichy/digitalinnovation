@@ -21,6 +21,8 @@ export function MissionAndVision() {
                     <Image
                         src="/svg-images/project-planning.svg"
                         alt="Equipe Digital Innovation"
+                        width={400}
+                        height={400}
                         className="w-full lg:w-3/4 lg:mx-auto lg:h-[400px]"
                     />
                 </div>
@@ -43,6 +45,8 @@ export function MissionAndVision() {
                     <Image
                         src="/svg-images/growth.svg"
                         alt="Equipe Digital Innovation"
+                        width={400}
+                        height={400}
                         className="w-full lg:w-3/4 lg:mx-auto lg:h-[400px]"
                     />
                 </div>

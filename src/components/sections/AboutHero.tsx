@@ -19,6 +19,8 @@ export function AboutHero() {
                 <Image
                     src="/svg-images/team.svg"
                     alt="Equipe Digital Innovation"
+                    width={400}
+                    height={400}
                     className="w-full lg:w-3/4 lg:mx-auto lg:h-[400px]"
                 />
             </div>

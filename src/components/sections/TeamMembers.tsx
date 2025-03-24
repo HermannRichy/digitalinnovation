@@ -10,37 +10,37 @@ const teamMembers = [
     {
         name: "Hermann Richy",
         role: "CEO & Lead Developer",
-        image: "#",
+        image: "/images/hero.png",
         socials: { facebook: "#", linkedin: "#", twitter: "#" },
     },
     {
         name: "Membre 2",
         role: "CTO",
-        image: "#",
+        image: "/images/hero.png",
         socials: { facebook: "#", linkedin: "#", twitter: "#" },
     },
     {
         name: "Membre 3",
         role: "UX/UI Designer",
-        image: "#",
+        image: "/images/hero.png",
         socials: { facebook: "#", linkedin: "#", twitter: "#" },
     },
     {
         name: "Membre 4",
         role: "Community Manager",
-        image: "#",
+        image: "/images/hero.png",
         socials: { facebook: "#", linkedin: "#", twitter: "#" },
     },
     {
         name: "Membre 5",
         role: "Développeur Web",
-        image: "#",
+        image: "/images/hero.png",
         socials: { facebook: "#", linkedin: "#", twitter: "#" },
     },
     {
         name: "Membre 6",
         role: "Graphiste",
-        image: "#",
+        image: "/images/hero.png",
         socials: { facebook: "#", linkedin: "#", twitter: "#" },
     },
 ];
@@ -62,6 +62,8 @@ export function TeamMembers() {
                                 <Image
                                     src={member.image}
                                     alt={member.name}
+                                    width={128}
+                                    height={128}
                                     className="w-full h-full object-cover"
                                 />
                                 <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-full">
