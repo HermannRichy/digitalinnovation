@@ -25,24 +25,7 @@ export const InfiniteMovingCards = ({
 
     const [start, setStart] = useState(false);
 
-    // Memoize addAnimation with useCallback
-    const addAnimation = useCallback(() => {
-        if (containerRef.current && scrollerRef.current) {
-            const scrollerContent = Array.from(scrollerRef.current.children);
-
-            scrollerContent.forEach((item) => {
-                const duplicatedItem = item.cloneNode(true);
-                if (scrollerRef.current) {
-                    scrollerRef.current.appendChild(duplicatedItem);
-                }
-            });
-
-            getDirection();
-            getSpeed();
-            setStart(true);
-        }
-    }, [getDirection, getSpeed]); // Add dependencies getDirection and getSpeed
-
+    // Déclarer getDirection et getSpeed AVANT addAnimation
     const getDirection = useCallback(() => {
         if (containerRef.current) {
             if (direction === "left") {
@@ -57,7 +40,7 @@ export const InfiniteMovingCards = ({
                 );
             }
         }
-    }, [direction]); // Add direction as a dependency
+    }, [direction]);
 
     const getSpeed = useCallback(() => {
         if (containerRef.current) {
@@ -78,7 +61,25 @@ export const InfiniteMovingCards = ({
                 );
             }
         }
-    }, [speed]); // Add speed as a dependency
+    }, [speed]);
+
+    // Maintenant addAnimation peut utiliser getDirection et getSpeed
+    const addAnimation = useCallback(() => {
+        if (containerRef.current && scrollerRef.current) {
+            const scrollerContent = Array.from(scrollerRef.current.children);
+
+            scrollerContent.forEach((item) => {
+                const duplicatedItem = item.cloneNode(true);
+                if (scrollerRef.current) {
+                    scrollerRef.current.appendChild(duplicatedItem);
+                }
+            });
+
+            getDirection();
+            getSpeed();
+            setStart(true);
+        }
+    }, [getDirection, getSpeed]);
 
     useEffect(() => {
         addAnimation();
