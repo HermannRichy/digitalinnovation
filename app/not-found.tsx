@@ -12,11 +12,14 @@ export default function NotFound() {
                     alt="404"
                     className="mb-5 md:h-96"
                 />
-                <p className="font-heading font-bold text-secondary mb-5">
+                <p className="font-heading font-bold text-white mb-5">
                     Il semble que vous êtes au mauvais endroit !
                 </p>
                 <div className="flex justify-center">
-                    <Link href="/" className="underline flex items-center">
+                    <Link
+                        href="/"
+                        className="underline text-white flex items-center"
+                    >
                         Revenir à la page d&apos;accueil
                         <LucideArrowRight className="ml-2" />
                     </Link>

@@ -8,10 +8,12 @@ import { WorkFlow } from "@/src/components/sections/WorkFlow";
 import { CTA } from "@/src/components/sections/CTA";
 import { LatestArticles } from "@/src/components/sections/LatestArticles";
 import { Footer } from "@/src/components/sections/Footer";
+import { HeroIntro } from "@/src/components/sections/HeroIntro";
 
 export default function Home() {
     return (
         <>
+            <HeroIntro />
             <Navbar />
             <main className="min-h-screen bg-dark">
                 <Hero />

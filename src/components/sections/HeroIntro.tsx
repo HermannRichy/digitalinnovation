@@ -1,127 +1,109 @@
-import { motion } from "motion/react"; // Nouveau nom si renommé
+"use client";
+import { motion, AnimatePresence } from "motion/react";
+import { useState, useEffect } from "react";
 import {
     IconCode,
-    IconSeo,
-    IconBrandGoogle,
-    IconBulb,
+    IconPalette,
+    IconBrandFigma,
+    IconBrandReact,
+    IconBrandMeta,
+    IconRocket,
 } from "@tabler/icons-react";
 
-const services = [
-    {
-        title: "Développement Web",
-        icon: <IconCode className="h-8 w-8" />,
-        delay: 0.2,
-    },
-    {
-        title: "Stratégie SEO",
-        icon: <IconSeo className="h-8 w-8" />,
-        delay: 0.4,
-    },
-    {
-        title: "Marketing Digital",
-        icon: <IconBrandGoogle className="h-8 w-8" />,
-        delay: 0.6,
-    },
-    {
-        title: "Innovation Technologique",
-        icon: <IconBulb className="h-8 w-8" />,
-        delay: 0.8,
-    },
+const icons = [
+    <IconCode size={40} />,
+    <IconPalette size={40} />,
+    <IconBrandFigma size={40} />,
+    <IconBrandReact size={40} />,
+    <IconBrandMeta size={40} />,
+    <IconRocket size={40} />,
 ];
 
-const HeroIntro = () => {
-    const containerVariants = {
-        hidden: { opacity: 0 },
-        visible: {
-            opacity: 1,
-            transition: {
-                staggerChildren: 0.2,
-                delayChildren: 0.5, // Décalage global
-            },
-        },
-    };
+export function HeroIntro() {
+    const [phase, setPhase] = useState<"circle" | "text" | "icon">("circle");
+    const [activeIndex, setActiveIndex] = useState(0);
+    const [loading, setLoading] = useState(true);
 
-    const itemVariants = {
-        hidden: { y: 20, opacity: 0 },
-        visible: {
-            y: 0,
-            opacity: 1,
-            transition: {
-                type: "spring",
-                stiffness: 100,
-                damping: 20, // Contrôle du rebond
-            },
-        },
-    };
+    useEffect(() => {
+        const timer1 = setTimeout(() => setPhase("text"), 2000);
+        const timer2 = setTimeout(() => setPhase("icon"), 6000);
+        const timer3 = setTimeout(() => setLoading(false), 8000);
+        return () => {
+            clearTimeout(timer1);
+            clearTimeout(timer2);
+            clearTimeout(timer3);
+        };
+    }, []);
+
+    useEffect(() => {
+        if (phase === "icon") {
+            const interval = setInterval(() => {
+                setActiveIndex((prev) => (prev + 1) % icons.length);
+            }, 200); // 200ms par icône
+            return () => clearInterval(interval);
+        }
+    }, [phase]);
 
     return (
-        <div className="min-h-screen bg-gradient-to-b from-gray-900 to-blue-900 flex items-center justify-center px-4">
-            <motion.div
-                initial="hidden"
-                animate="visible"
-                variants={containerVariants}
-                className="max-w-6xl mx-auto text-center"
-            >
-                {/* Titre principal */}
-                <motion.h1
-                    variants={itemVariants}
-                    className="text-5xl md:text-7xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-600 mb-6"
-                >
-                    Digital Innovation
-                </motion.h1>
-
-                {/* Sous-titre */}
-                <motion.p
-                    variants={itemVariants}
-                    className="text-xl md:text-2xl text-gray-300 mb-12 max-w-2xl mx-auto"
-                >
-                    Transformons votre présence digitale avec des solutions
-                    innovantes et sur mesure
-                </motion.p>
-
-                {/* Grille de services */}
+        <AnimatePresence>
+            {loading && (
                 <motion.div
-                    variants={containerVariants}
-                    className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16"
+                    key="loader"
+                    initial={{ opacity: 1 }}
+                    animate={{ opacity: 1 }}
+                    exit={{ opacity: 0 }}
+                    transition={{ duration: 0.5 }}
+                    className="fixed inset-0 z-50 bg-dark flex items-center justify-center"
                 >
-                    {services.map((service, index) => (
+                    {phase === "circle" && (
                         <motion.div
-                            key={index}
-                            variants={itemVariants}
-                            whileHover={{ scale: 1.05 }}
-                            className="p-6 bg-white/10 backdrop-blur-lg rounded-xl hover:bg-white/20 transition-all"
+                            key="circle"
+                            initial={{ scale: 0, opacity: 1 }}
+                            animate={{
+                                scale: [1, 1.2, 1],
+                                opacity: [1, 0.5, 1],
+                            }}
+                            transition={{ duration: 2, repeat: Infinity }}
+                            className="w-24 h-24 rounded-full bg-gradient-to-r from-primary to-secondary"
+                        />
+                    )}
+
+                    {phase === "text" && (
+                        <motion.div
+                            key="text"
+                            initial={{ scale: 0, opacity: 0 }}
+                            animate={{ scale: 1, opacity: 1 }}
+                            exit={{ scale: 1.5, opacity: 0 }}
+                            className="relative w-60 h-60 md:w-96 md:h-96 flex items-center justify-center"
                         >
-                            <div className="flex flex-col items-center gap-4">
-                                <motion.div
-                                    animate={{ rotate: [0, 15, -15, 0] }}
-                                    transition={{
-                                        repeat: Infinity,
-                                        duration: 4,
-                                        ease: "easeInOut", // Ajout d'un easing
-                                    }}
-                                    className="text-cyan-400"
-                                >
-                                    {service.icon}
-                                </motion.div>
-                                <h3 className="text-lg font-semibold text-white">
-                                    {service.title}
-                                </h3>
-                            </div>
+                            <motion.div
+                                className="absolute inset-0 rounded-full bg-gradient-to-r from-primary to-secondary"
+                                layoutId="circle"
+                            />
+                            <motion.h1
+                                initial={{ opacity: 0 }}
+                                animate={{ opacity: 1 }}
+                                className="text-2xl md:text-4xl font-bold text-white z-10"
+                            >
+                                Digital Innovation
+                            </motion.h1>
                         </motion.div>
-                    ))}
+                    )}
+
+                    {phase === "icon" && (
+                        <motion.div
+                            key="icon"
+                            initial={{ opacity: 0 }}
+                            animate={{ opacity: 1 }}
+                            exit={{ opacity: 0 }}
+                            transition={{ duration: 0.1 }}
+                            className="flex items-center justify-center w-24 h-24 rounded-full bg-gradient-to-r from-primary to-secondary"
+                        >
+                            {icons[activeIndex]}
+                        </motion.div>
+                    )}
                 </motion.div>
-
-                {/* Bouton CTA */}
-                <motion.button
-                    whileHover={{ scale: 1.05 }}
-                    whileTap={{ scale: 0.95 }}
-                    className="bg-cyan-500 hover:bg-cyan-600 text-white px-8 py-4 rounded-full text-lg font-semibold shadow-lg shadow-cyan-500/30"
-                >
-                    Start Your Project
-                </motion.button>
-            </motion.div>
-        </div>
+            )}
+        </AnimatePresence>
     );
-};
-
-export default HeroIntro;
+}
