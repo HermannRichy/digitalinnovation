@@ -39,7 +39,7 @@ export function HeroIntro() {
         if (phase === "icon") {
             const interval = setInterval(() => {
                 setActiveIndex((prev) => (prev + 1) % icons.length);
-            }, 200); // 200ms par icône
+            }, 200);
             return () => clearInterval(interval);
         }
     }, [phase]);
