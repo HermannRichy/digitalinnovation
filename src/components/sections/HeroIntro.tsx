@@ -11,12 +11,12 @@ import {
 } from "@tabler/icons-react";
 
 const icons = [
-    <IconCode size={40} />,
-    <IconPalette size={40} />,
-    <IconBrandFigma size={40} />,
-    <IconBrandReact size={40} />,
-    <IconBrandMeta size={40} />,
-    <IconRocket size={40} />,
+    <IconCode size={40} key="code" />,
+    <IconPalette size={40} key="palette" />,
+    <IconBrandFigma size={40} key="figma" />,
+    <IconBrandReact size={40} key="react" />,
+    <IconBrandMeta size={40} key="meta" />,
+    <IconRocket size={40} key="rocket" />,
 ];
 
 export function HeroIntro() {
