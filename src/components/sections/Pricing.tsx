@@ -29,9 +29,10 @@ export function Pricing() {
         },
         {
             title: "Application mobile",
-            price: "1 000 000 – 4 000 000 FCFA",
+            price: "1 500 000 – 5 000 000 FCFA",
             details: [
                 "Design UI/UX",
+                "Développement natif ou hybride",
                 "Déploiement sur stores",
                 "Tests de performance",
             ],
@@ -40,25 +41,25 @@ export function Pricing() {
             title: "SaaS",
             price: "1 500 000 – 5 000 000 FCFA",
             details: [
-                "Architecture cloud",
+                "Développement sur mesure",
                 "Gestion d'abonnements",
                 "API sécurisées",
-                "Tests utilisateurs",
+                "Hébergement cloud",
             ],
         },
         {
             title: "Community Management",
             price: "150 000 – 500 000 FCFA/mois",
             details: [
-                "Gestion de 3 réseaux sociaux",
+                "Gestion de 2 à 4 réseaux sociaux",
                 "Création de contenu",
                 "Analyse mensuelle",
                 "Engagement communautaire",
             ],
         },
         {
-            title: "Conception graphique",
-            price: "100 000 – 300 000 FCFA",
+            title: "Charte graphique",
+            price: "150 000 – 300 000 FCFA",
             details: [
                 "Logo + charte graphique",
                 "Fichiers vectoriels",
@@ -78,7 +79,7 @@ export function Pricing() {
         },
         {
             title: "Campagne publicitaire",
-            price: "300 000 – 2 000 000 FCFA",
+            price: "100 000 – 1 000 000 FCFA",
             details: [
                 "Création de visuels",
                 "Diffusion ciblée",
@@ -88,7 +89,7 @@ export function Pricing() {
         },
         {
             title: "Référencement (SEO)",
-            price: "150 000 – 800 000 FCFA/mois",
+            price: "100 000 – 800 000 FCFA/mois",
             details: [
                 "Audit technique",
                 "Création de contenu SEO",

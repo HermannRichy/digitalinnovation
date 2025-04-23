@@ -53,7 +53,7 @@ export function HeroIntro() {
                     animate={{ opacity: 1 }}
                     exit={{ opacity: 0 }}
                     transition={{ duration: 0.5 }}
-                    className="fixed inset-0 z-50 bg-dark flex items-center justify-center"
+                    className="fixed inset-0 z-50 bg-dark flex items-center justify-center overflow-hidden"
                 >
                     {phase === "circle" && (
                         <motion.div
@@ -83,7 +83,7 @@ export function HeroIntro() {
                             <motion.h1
                                 initial={{ opacity: 0 }}
                                 animate={{ opacity: 1 }}
-                                className="text-2xl md:text-4xl font-bold text-white z-10"
+                                className="text-xl md:text-3xl font-fira-code font-bold text-white z-10"
                             >
                                 Digital Innovation
                             </motion.h1>

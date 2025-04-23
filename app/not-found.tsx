@@ -10,6 +10,8 @@ export default function NotFound() {
                 <Image
                     src="svg-images/404.svg"
                     alt="404"
+                    width={350}
+                    height={350}
                     className="mb-5 md:h-96"
                 />
                 <p className="font-heading font-bold text-white mb-5">

@@ -59,44 +59,44 @@ export function WhyChooseUs() {
                         <Image
                             src="/images/partner1.png"
                             alt="Client 1"
-                            width={40}
-                            height={40}
-                            className="h-10"
+                            width={60}
+                            height={50}
+                            className="h-12"
                         />
                         <Image
                             src="/images/partner7.jpeg"
                             alt="Client 2"
-                            width={40}
-                            height={40}
-                            className="h-10 hidden md:inline-block"
+                            width={60}
+                            height={50}
+                            className="h-12 hidden md:inline-block"
                         />
                         <Image
                             src="/images/partner3.png"
                             alt="Client 3"
-                            width={40}
-                            height={40}
-                            className="h-10"
+                            width={60}
+                            height={50}
+                            className="h-12"
                         />
                         <Image
                             src="/images/partner4.png"
                             alt="Client 4"
-                            width={40}
-                            height={40}
-                            className="h-10"
+                            width={60}
+                            height={50}
+                            className="h-12"
                         />
                         <Image
                             src="/images/partner5.jpeg"
                             alt="Client 5"
-                            width={40}
-                            height={40}
-                            className="h-10 hidden md:inline-block"
+                            width={60}
+                            height={50}
+                            className="h-12 hidden md:inline-block"
                         />
                         <Image
                             src="/images/partner8.webp"
                             alt="Client 6"
-                            width={40}
-                            height={40}
-                            className="h-10"
+                            width={60}
+                            height={50}
+                            className="h-12"
                         />
                     </div>
                 </div>

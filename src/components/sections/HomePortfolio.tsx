@@ -19,8 +19,8 @@ export function HomePortfolio() {
                     Voir les réalisations <br /> de Digital Innovation
                 </h2>
                 <Button asChild variant="outline" className="rounded-full">
-                    <Link href="/portfolio">
-                        Voir plus{" "}
+                    <Link href="/services">
+                        Voir nos services{" "}
                         <LucideArrowRight size={20} className="ml-6 md:ml-10" />
                     </Link>
                 </Button>
@@ -36,30 +36,37 @@ export function HomePortfolio() {
                     <CarouselContent>
                         <CarouselItem className="w-4/5 mx-auto lg:basis-1/2">
                             <Safari
-                                url="magicui.design"
+                                url="virtualedgeagency.com"
                                 className="size-full"
                                 imageSrc="images/portfolio1.png"
                             />
                         </CarouselItem>
                         <CarouselItem className="w-4/5 mx-auto lg:basis-1/2">
                             <Safari
-                                url="magicui.design"
+                                url="ceforaformation.com"
                                 className="size-full"
                                 imageSrc="images/portfolio2.png"
                             />
                         </CarouselItem>
                         <CarouselItem className="w-4/5 mx-auto lg:basis-1/2">
                             <Safari
-                                url="magicui.design"
+                                url="hermann-richy.vercel.app"
                                 className="size-full"
                                 imageSrc="images/portfolio3.png"
                             />
                         </CarouselItem>
                         <CarouselItem className="w-4/5 mx-auto lg:basis-1/2">
                             <Safari
-                                url="magicui.design"
+                                url="futurcraftinstitut.com"
                                 className="size-full"
-                                imageSrc="images/portfolio4.png"
+                                imageSrc="images/portfolio4.jpeg"
+                            />
+                        </CarouselItem>
+                        <CarouselItem className="w-4/5 mx-auto lg:basis-1/2">
+                            <Safari
+                                url="oeilmobylpro.com"
+                                className="size-full"
+                                imageSrc="images/portfolio5.png"
                             />
                         </CarouselItem>
                     </CarouselContent>

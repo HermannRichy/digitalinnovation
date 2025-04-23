@@ -4,7 +4,6 @@ import {
     IconBrandTiktok,
     IconBrandFacebook,
     IconBrandInstagram,
-    IconBrandLinkedin,
 } from "@tabler/icons-react";
 
 export function Footer() {
@@ -13,7 +12,7 @@ export function Footer() {
             <div className="container mx-auto px-4">
                 <div className="flex flex-wrap justify-between">
                     <div className="w-full md:w-1/2 mb-6 md:mb-0">
-                        <h1 className="font-bold text-xl md:text-2xl mb-5">
+                        <h1 className="font-bold font-fira-code text-xl md:text-2xl mb-5">
                             Digital Innovation
                         </h1>
                         <p className="mb-4">Elevons les normes du numérique.</p>
@@ -42,35 +41,28 @@ export function Footer() {
                         </p>
                         <div className="flex space-x-4">
                             <a
-                                href="https://facebook.com"
+                                href="https://www.facebook.com/digitalinnovationbj"
                                 target="_blank"
                                 rel="noopener noreferrer"
                             >
                                 <IconBrandFacebook className="h-8 w-8 hover:text-neon" />
                             </a>
                             <a
-                                href="https://instagram.com"
+                                href="https://www.instagram.com/digitalinnovationbj?igsh=dXhnN3MzcnJ0YXVn"
                                 target="_blank"
                                 rel="noopener noreferrer"
                             >
                                 <IconBrandInstagram className="h-8 w-8 hover:text-neon" />
                             </a>
                             <a
-                                href="https://whatsapp.com"
+                                href="https://wa.me/22966360300"
                                 target="_blank"
                                 rel="noopener noreferrer"
                             >
                                 <IconBrandWhatsapp className="h-8 w-8 hover:text-neon" />
                             </a>
                             <a
-                                href="https://linkedin.com"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                            >
-                                <IconBrandLinkedin className="h-8 w-8 hover:text-neon" />
-                            </a>
-                            <a
-                                href="https://tiktok.com"
+                                href="https://www.tiktok.com/@digital_innov?_t=ZN-8vQGUZfRx1L&_r=1"
                                 target="_blank"
                                 rel="noopener noreferrer"
                             >

@@ -3,34 +3,22 @@ import { AnimatedTestimonials } from "@/src/components/ui/animated-testimonials"
 export function HomeTestimonials() {
     const testimonials = [
         {
-            quote: "The attention to detail and innovative features have completely transformed our workflow. This is exactly what we've been looking for.",
-            name: "Sarah Chen",
-            designation: "Product Manager at TechFlow",
+            quote: "Le site web de tous mes projets est maintenant géré par une seule agence web: Digital Innovation.",
+            name: "Yoan Melson DANSOU",
+            designation: "CEO Programme Futur & FuturCraft Institut",
             src: "/images/testimonial-img-1.jpg",
         },
         {
-            quote: "Implementation was seamless and the results exceeded our expectations. The platform's flexibility is remarkable.",
-            name: "Michael Rodriguez",
-            designation: "CTO at InnovateSphere",
-            src: "/images/testimonial-img-1.jpg",
+            quote: "Le site web de notre centre de formation a été développé par Digital Innovation. Je recommande ces professionnels.",
+            name: "Serge HOUNDODE",
+            designation: "PDG Cefora Formation",
+            src: "/images/testimonial-img-3.jpg",
         },
         {
-            quote: "This solution has significantly improved our team's productivity. The intuitive interface makes complex tasks simple.",
-            name: "Emily Watson",
-            designation: "Operations Director at CloudScale",
-            src: "/images/testimonial-img-1.jpg",
-        },
-        {
-            quote: "Outstanding support and robust features. It's rare to find a product that delivers on all its promises.",
-            name: "James Kim",
-            designation: "Engineering Lead at DataPro",
-            src: "/images/testimonial-img-1.jpg",
-        },
-        {
-            quote: "The scalability and performance have been game-changing for our organization. Highly recommend to any growing business.",
-            name: "Lisa Thompson",
-            designation: "VP of Technology at FutureNet",
-            src: "/images/testimonial-img-1.jpg",
+            quote: "La charte graphique réalisée par l'équipe de Digital Innovation à donner une nouvelle vie à mon entreprise.",
+            name: "Emile",
+            designation: "Gérant de Extra Ménuiserie",
+            src: "/images/testimonial-img-2.jpeg",
         },
     ];
 

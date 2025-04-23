@@ -8,19 +8,19 @@ import Image from "next/image";
 
 const teamMembers = [
     {
-        name: "Hermann Richy",
+        name: "Hermann Ulrich HOUNNOUVI",
         role: "CEO & Lead Developer",
         image: "/images/hero.png",
         socials: { facebook: "#", linkedin: "#", twitter: "#" },
     },
     {
-        name: "Membre 2",
-        role: "CTO",
+        name: "Audrey Faustin HOUESSOU",
+        role: "CTO & WordPress Expert",
         image: "/images/hero.png",
         socials: { facebook: "#", linkedin: "#", twitter: "#" },
     },
     {
-        name: "Membre 3",
+        name: "Mario MARTIN",
         role: "UX/UI Designer",
         image: "/images/hero.png",
         socials: { facebook: "#", linkedin: "#", twitter: "#" },
@@ -47,7 +47,7 @@ const teamMembers = [
 
 export function TeamMembers() {
     return (
-        <section className="my-20 lg:mt-40 py-14 px-4 md:px-10 lg:px-24">
+        <section className="hidden my-20 lg:mt-40 py-14 px-4 md:px-10 lg:px-24">
             <div className="max-w-6xl mx-auto">
                 <h2 className="text-3xl md:text-4xl lg:text-6xl text-center text-primary font-bold mb-8">
                     Notre équipe d&apos;innovateurs
