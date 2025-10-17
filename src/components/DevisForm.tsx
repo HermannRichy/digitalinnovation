@@ -2,18 +2,27 @@
 
 import { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
+import ReCAPTCHA from "react-google-recaptcha";
 import { Alert, AlertDescription } from "@/src/components/ui/alert";
 
 type SubmissionState = "idle" | "sending" | "success" | "error";
 
 export function DevisForm() {
     const formRef = useRef<HTMLFormElement | null>(null);
+    const recaptchaRef = useRef<ReCAPTCHA>(null);
     const [status, setStatus] = useState<SubmissionState>("idle");
     const [errorMessage, setErrorMessage] = useState<string>("");
+    const [recaptchaToken, setRecaptchaToken] = useState<string>("");
 
     const serviceId = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID as string;
     const templateId = process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID as string;
     const publicKey = process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY as string;
+    const recaptchaSiteKey = process.env
+        .NEXT_PUBLIC_RECAPTCHA_SITE_KEY as string;
+
+    const handleRecaptchaChange = (token: string | null) => {
+        setRecaptchaToken(token || "");
+    };
 
     const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
@@ -27,13 +36,29 @@ export function DevisForm() {
             return;
         }
 
+        if (!recaptchaToken) {
+            setStatus("error");
+            setErrorMessage("Veuillez vérifier que vous n'êtes pas un robot.");
+            return;
+        }
+
         try {
             setStatus("sending");
+
+            // Créer un FormData avec les données du formulaire
+            const formData = new FormData(formRef.current);
+            formData.append("recaptcha_token", recaptchaToken);
+
             await emailjs.sendForm(serviceId, templateId, formRef.current, {
                 publicKey,
             });
+
             setStatus("success");
             formRef.current.reset();
+            setRecaptchaToken("");
+            if (recaptchaRef.current) {
+                recaptchaRef.current.reset();
+            }
         } catch (err: unknown) {
             if (err instanceof Error) {
                 setErrorMessage(err.message);
@@ -41,6 +66,11 @@ export function DevisForm() {
                 setErrorMessage("Une erreur est survenue. Veuillez réessayer.");
             }
             setStatus("error");
+            // Reset reCAPTCHA en cas d'erreur
+            if (recaptchaRef.current) {
+                recaptchaRef.current.reset();
+            }
+            setRecaptchaToken("");
         }
     };
 
@@ -125,15 +155,26 @@ export function DevisForm() {
                     />
                 </div>
 
-                <div className="md:col-span-2 flex items-center justify-between gap-3">
-                    <p className="text-xs text-muted-foreground">
+                {/* reCAPTCHA */}
+                <div className="md:col-span-2 flex justify-center">
+                    <ReCAPTCHA
+                        ref={recaptchaRef}
+                        sitekey={recaptchaSiteKey}
+                        onChange={handleRecaptchaChange}
+                        theme="dark"
+                        size="normal"
+                    />
+                </div>
+
+                <div className="md:col-span-2 flex flex-col md:flex-row items-center justify-between gap-3">
+                    <p className="text-xs text-center md:text-left text-muted-foreground">
                         En envoyant ce formulaire, vous acceptez d&apos;être
                         contacté par Digital Innovation.
                     </p>
                     <button
                         type="submit"
-                        disabled={status === "sending"}
-                        className="px-6 py-2 cursor-pointer rounded-full text-xs bg-primary text-black border border-primary hover:bg-transparent hover:text-primary transition-all duration-300 disabled:opacity-60"
+                        disabled={status === "sending" || !recaptchaToken}
+                        className="px-6 py-2 cursor-pointer rounded-full text-xs bg-primary text-black border border-primary hover:bg-transparent hover:text-primary transition-all duration-300 disabled:opacity-60 disabled:cursor-not-allowed"
                     >
                         {status === "sending"
                             ? "Envoi..."

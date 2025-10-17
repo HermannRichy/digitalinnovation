@@ -22,7 +22,7 @@ export function Footer() {
                         <div className="mt-4 bg-dark text-neon py-4 px-8 rounded-lg w-fit">
                             <p className="mb-4">
                                 <span className="font-semibold">Email :</span>{" "}
-                                contact@digitalinnovation.bj
+                                digitalinnovationbj@gmail.com
                             </p>
                             <p>
                                 <span className="font-semibold">Numéro :</span>{" "}

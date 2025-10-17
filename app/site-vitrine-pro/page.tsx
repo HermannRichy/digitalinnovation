@@ -760,7 +760,7 @@ export default function SiteVitrineProPage() {
                 {/* Devis */}
                 <section
                     id="devis"
-                    className="min-h-screen overflow-hidden flex items-center mt-20"
+                    className="min-h-screen overflow-hidden flex items-center my-20"
                 >
                     <div className="container mx-auto px-4 md:px-6 text-white">
                         <div className="text-center mb-10">
