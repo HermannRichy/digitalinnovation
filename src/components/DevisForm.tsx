@@ -34,11 +34,13 @@ export function DevisForm() {
             });
             setStatus("success");
             formRef.current.reset();
-        } catch (err: any) {
+        } catch (err: unknown) {
+            if (err instanceof Error) {
+                setErrorMessage(err.message);
+            } else {
+                setErrorMessage("Une erreur est survenue. Veuillez réessayer.");
+            }
             setStatus("error");
-            setErrorMessage(
-                err?.text || "Une erreur est survenue. Veuillez réessayer."
-            );
         }
     };
 
@@ -125,8 +127,8 @@ export function DevisForm() {
 
                 <div className="md:col-span-2 flex items-center justify-between gap-3">
                     <p className="text-xs text-muted-foreground">
-                        En envoyant ce formulaire, vous acceptez d'être contacté
-                        par Digital Innovation.
+                        En envoyant ce formulaire, vous acceptez d&apos;être
+                        contacté par Digital Innovation.
                     </p>
                     <button
                         type="submit"

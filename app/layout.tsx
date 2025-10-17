@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import { Outfit, Fira_Code, Space_Grotesk } from "next/font/google";
-import { kindAvenue, gebuk } from "./fonts";
 import { ThemeProvider } from "next-themes";
 import "./globals.css";
 

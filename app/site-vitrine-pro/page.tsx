@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import Image from "next/image";
 import {
     MoveRight,
     Palette,
@@ -92,7 +91,7 @@ export default function SiteVitrineProPage() {
                                 Fonctionnalités
                             </Badge>
                             <h2 className="text-2xl md:text-4xl font-semibold leading-tight font-space-grostek">
-                                Bien plus qu'une simple vitrine...
+                                Bien plus qu&apos;une simple vitrine...
                             </h2>
                             <p className="mt-4 text-muted-foreground text-sm lg:text-base">
                                 Une machine à conversion qui conquit le coeur de
@@ -129,7 +128,7 @@ export default function SiteVitrineProPage() {
                                         <p className="text-sm text-muted-foreground mt-1">
                                             Design moderne et intuitif qui guide
                                             naturellement vos visiteurs vers
-                                            l'action et maximise les
+                                            l&apos;action et maximise les
                                             conversions.
                                         </p>
                                     </div>
@@ -216,7 +215,7 @@ export default function SiteVitrineProPage() {
                                         </h3>
                                         <p className="text-muted-foreground leading-relaxed mb-6">
                                             Votre site ne doit pas juste
-                                            "exister". Nous créons une{" "}
+                                            exister. Nous créons une{" "}
                                             <Badge
                                                 variant="secondary"
                                                 className="mx-1"
@@ -308,8 +307,8 @@ export default function SiteVitrineProPage() {
                                             size={16}
                                         />
                                         <AlertDescription className="text-primary font-medium">
-                                            Vous n'êtes pas juste un client,
-                                            vous devenez un partenaire.
+                                            Vous n&apos;êtes pas juste un
+                                            client, vous devenez un partenaire.
                                         </AlertDescription>
                                     </Alert>
                                 </div>
@@ -474,10 +473,11 @@ export default function SiteVitrineProPage() {
                                     <div className="flex-1">
                                         <h3 className="text-xl font-semibold mb-4 font-space-grostek">
                                             Une agence locale, fière
-                                            d'accompagner les marques béninoises
+                                            d&apos;accompagner les marques
+                                            béninoises
                                         </h3>
                                         <p className="text-muted-foreground leading-relaxed mb-6">
-                                            Digital Innovation, c'est une{" "}
+                                            Digital Innovation, c&apos;est une{" "}
                                             <Badge
                                                 variant="secondary"
                                                 className="mx-1"
@@ -683,8 +683,8 @@ export default function SiteVitrineProPage() {
                                                     </Badge>
                                                 </div>
                                                 <p className="text-sm text-muted-foreground">
-                                                    Jusqu'à 10 produits, panier,
-                                                    paiement
+                                                    Jusqu&apos;à 10 produits,
+                                                    panier, paiement
                                                 </p>
                                             </div>
                                             <div className="p-4 rounded-lg bg-background/30 border border-primary/10">
@@ -748,8 +748,8 @@ export default function SiteVitrineProPage() {
                                         </span>
                                     </Link>
                                     <p className="text-sm text-muted-foreground mt-4">
-                                        Besoin d'une fonctionnalité spécifique ?
-                                        Parlons-en !
+                                        Besoin d&apos;une fonctionnalité
+                                        spécifique ? Parlons-en !
                                     </p>
                                 </div>
                             </MagicCard>
