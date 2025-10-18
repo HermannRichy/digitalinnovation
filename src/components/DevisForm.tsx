@@ -87,7 +87,7 @@ export function DevisForm() {
                         name="full_name"
                         required
                         placeholder="Ex: Jean K."
-                        className="w-full rounded-md bg-background/50 border border-primary/10 px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-primary/40"
+                        className="w-full rounded-md bg-background/50 border border-primary/50 px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-primary/40"
                     />
                 </div>
                 <div className="md:col-span-1">
@@ -97,7 +97,7 @@ export function DevisForm() {
                         name="email"
                         required
                         placeholder="vous@exemple.com"
-                        className="w-full rounded-md bg-background/50 border border-primary/10 px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-primary/40"
+                        className="w-full rounded-md bg-background/50 border border-primary/50 px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-primary/40"
                     />
                 </div>
 
@@ -106,7 +106,7 @@ export function DevisForm() {
                     <input
                         name="phone"
                         placeholder="Ex: +229 90 00 00 00"
-                        className="w-full rounded-md bg-background/50 border border-primary/10 px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-primary/40"
+                        className="w-full rounded-md bg-background/50 border border-primary/50 px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-primary/40"
                     />
                 </div>
                 <div className="md:col-span-1">
@@ -114,7 +114,7 @@ export function DevisForm() {
                     <input
                         name="company"
                         placeholder="Nom de votre structure"
-                        className="w-full rounded-md bg-background/50 border border-primary/10 px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-primary/40"
+                        className="w-full rounded-md bg-background/50 border border-primary/50 px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-primary/40"
                     />
                 </div>
 
@@ -122,7 +122,7 @@ export function DevisForm() {
                     <label className="block text-sm mb-1">Budget</label>
                     <select
                         name="budget"
-                        className="w-full rounded-md bg-background/50 border border-primary/10 px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-primary/40"
+                        className="w-full rounded-md bg-background/50 border border-primary/50 px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-primary/40"
                         defaultValue="200k-400k"
                     >
                         <option value="<200k">Moins de 200.000 FCFA</option>
@@ -136,7 +136,7 @@ export function DevisForm() {
                     <label className="block text-sm mb-1">Paiement</label>
                     <select
                         name="payment_plan"
-                        className="w-full rounded-md bg-background/50 border border-primary/10 px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-primary/40"
+                        className="w-full rounded-md bg-background/50 border border-primary/50 px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-primary/40"
                         defaultValue="x1"
                     >
                         <option value="x1">Paiement en une fois (x1)</option>
@@ -151,7 +151,7 @@ export function DevisForm() {
                         name="message"
                         rows={5}
                         placeholder="Parlez-nous de votre projet (objectifs, pages, inspiration, délais)"
-                        className="w-full rounded-md bg-background/50 border border-primary/10 px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-primary/40"
+                        className="w-full rounded-md bg-background/50 border border-primary/50 px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-primary/40"
                     />
                 </div>
 
@@ -187,8 +187,8 @@ export function DevisForm() {
                 <div className="mt-4">
                     <Alert className="border-primary/20 bg-primary/5">
                         <AlertDescription className="text-primary font-medium">
-                            Votre demande a été envoyée. Nous reviendrons vers
-                            vous sous 24h.
+                            Votre demande de démo a été envoyée. Nous reviendrons vers
+                            vous sous 24h avec votre maquette personnalisée ou votre audit gratuit.
                         </AlertDescription>
                     </Alert>
                 </div>

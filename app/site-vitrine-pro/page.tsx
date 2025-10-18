@@ -25,13 +25,13 @@ import { DevisForm } from "@/src/components/DevisForm";
 import { Footer } from "@/src/components/sections/Footer";
 
 export const metadata: Metadata = {
-    title: "Création de site vitrine pro | Digital Innovation",
+    title: "Démo gratuite et audit de site web | Digital Innovation",
     description:
-        "Landing page Bento pour convertir en leads qualifiés: création de sites vitrines rapides, élégants et SEO-ready.",
+        "Obtenez votre démo gratuite et audit de site web personnalisé. Maquette de votre futur site ou analyse complète de votre site existant.",
     openGraph: {
-        title: "Création de site vitrine pro | Digital Innovation",
+        title: "Démo gratuite et audit de site web | Digital Innovation",
         description:
-            "Obtenez un site vitrine professionnel, rapide et orienté conversion.",
+            "Obtenez votre démo gratuite et audit de site web personnalisé. Maquette de votre futur site ou analyse complète de votre site existant.",
         type: "website",
         url: "https://digitalinnovation.bj/site-vitrine-pro",
         images: [
@@ -71,7 +71,7 @@ export default function SiteVitrineProPage() {
                                 className="flex items-center justify-center text-black rounded-md group"
                             >
                                 <span className="px-8 py-2 rounded-full text-xs bg-primary group-hover:bg-transparent group-hover:text-primary border border-primary transition-all duration-300">
-                                    Demander un devis
+                                    Obtenir une démo
                                 </span>
                                 <span className="w-8 h-8 rounded-full flex items-center justify-center border border-primary group-hover:bg-primary relative right-1">
                                     <MoveRight
@@ -102,7 +102,7 @@ export default function SiteVitrineProPage() {
                                 className="flex items-center justify-center text-black mt-4 rounded-md group"
                             >
                                 <span className="px-8 py-2 rounded-full text-xs bg-primary group-hover:bg-transparent group-hover:text-primary border border-primary transition-all duration-300">
-                                    Demander un devis
+                                    Obtenir une démo
                                 </span>
                                 <span className="w-8 h-8 rounded-full flex items-center justify-center border border-primary group-hover:bg-primary relative right-1">
                                     <MoveRight
@@ -738,7 +738,7 @@ export default function SiteVitrineProPage() {
                                         className="flex items-center justify-center text-black rounded-md group"
                                     >
                                         <span className="px-8 py-2 rounded-full text-xs bg-primary group-hover:bg-transparent group-hover:text-primary border border-primary transition-all duration-300">
-                                            Demander un devis personnalisé
+                                            Obtenir une démo personnalisée
                                         </span>
                                         <span className="w-8 h-8 rounded-full flex items-center justify-center border border-primary group-hover:bg-primary relative right-1">
                                             <MoveRight
@@ -765,15 +765,13 @@ export default function SiteVitrineProPage() {
                     <div className="container mx-auto px-4 md:px-6 text-white">
                         <div className="text-center mb-10">
                             <Badge className="relative top-2 lg:top-3 -rotate-8">
-                                Demande de devis
+                                Obtenir votre démo
                             </Badge>
                             <h2 className="text-2xl md:text-4xl font-semibold leading-tight font-space-grostek mt-4">
                                 Démarrons votre projet
                             </h2>
                             <p className="mt-3 text-muted-foreground text-sm lg:text-base max-w-2xl mx-auto">
-                                Dites-nous en plus sur vos besoins. Nous vous
-                                répondons sous 24 heures avec une proposition
-                                adaptée.
+                                Dites-nous en plus sur vos besoins. Si vous avez déjà un site existant, nous vous offrons un audit gratuit. Sinon, nous créons une maquette personnalisée de votre futur site web.
                             </p>
                         </div>
 
