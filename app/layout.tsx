@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Outfit, Fira_Code, Space_Grotesk } from "next/font/google";
 import { ThemeProvider } from "next-themes";
+import { MetaPixel } from "@/src/components/MetaPixel";
 import "./globals.css";
 
 const outfit = Outfit({
@@ -67,6 +68,7 @@ export default function RootLayout({
                 >
                     {children}
                 </ThemeProvider>
+                <MetaPixel />
             </body>
         </html>
     );

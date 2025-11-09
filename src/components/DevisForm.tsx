@@ -4,6 +4,7 @@ import { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
 import ReCAPTCHA from "react-google-recaptcha";
 import { Alert, AlertDescription } from "@/src/components/ui/alert";
+import { useMetaPixel } from "@/src/hooks/useMetaPixel";
 
 type SubmissionState = "idle" | "sending" | "success" | "error";
 
@@ -13,6 +14,7 @@ export function DevisForm() {
     const [status, setStatus] = useState<SubmissionState>("idle");
     const [errorMessage, setErrorMessage] = useState<string>("");
     const [recaptchaToken, setRecaptchaToken] = useState<string>("");
+    const { trackLead } = useMetaPixel();
 
     const serviceId = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID as string;
     const templateId = process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID as string;
@@ -49,9 +51,21 @@ export function DevisForm() {
             const formData = new FormData(formRef.current);
             formData.append("recaptcha_token", recaptchaToken);
 
+            // Récupérer les données pour le tracking avant l'envoi
+            const budget = formData.get("budget") as string;
+            const formValues = {
+                content_name: "Demande de démo - Site Vitrine Pro",
+                content_category: "Site Vitrine",
+                value: budget || "Non spécifié",
+                currency: "XOF",
+            };
+
             await emailjs.sendForm(serviceId, templateId, formRef.current, {
                 publicKey,
             });
+
+            // Tracker l'événement Lead avec Meta Pixel après envoi réussi
+            trackLead(formValues);
 
             setStatus("success");
             formRef.current.reset();
@@ -187,8 +201,9 @@ export function DevisForm() {
                 <div className="mt-4">
                     <Alert className="border-primary/20 bg-primary/5">
                         <AlertDescription className="text-primary font-medium">
-                            Votre demande de démo a été envoyée. Nous reviendrons vers
-                            vous sous 24h avec votre maquette personnalisée ou votre audit gratuit.
+                            Votre demande de démo a été envoyée. Nous
+                            reviendrons vers vous sous 24h avec votre maquette
+                            personnalisée ou votre audit gratuit.
                         </AlertDescription>
                     </Alert>
                 </div>
