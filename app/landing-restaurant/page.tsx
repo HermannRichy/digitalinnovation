@@ -21,7 +21,6 @@ import { SparklesText } from "@/src/components/magicui/sparkles-text";
 import { MagicCard } from "@/src/components/magicui/magic-card";
 import { AuroraBackground } from "@/src/components/ui/aurora-background";
 import { Badge } from "@/src/components/ui/badge";
-import { Alert, AlertDescription } from "@/src/components/ui/alert";
 import { Footer } from "@/src/components/sections/Footer";
 
 export const metadata: Metadata = {
