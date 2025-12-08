@@ -610,9 +610,9 @@ export default function RestaurantsFetesPage() {
                                                         Offre spéciale fêtes :
                                                     </strong>{" "}
                                                     Les 10 premiers restaurants
-                                                    bénéficient d'une séance
-                                                    photo gratuite de leurs
-                                                    plats !
+                                                    bénéficient d&apos;une
+                                                    séance photo gratuite de
+                                                    leurs plats !
                                                 </AlertDescription>
                                             </Alert>
                                         </div>
@@ -662,7 +662,7 @@ export default function RestaurantsFetesPage() {
                                         7 JOURS
                                     </div>
                                     <p className="text-sm text-gray-400 mt-2">
-                                        Délai d'installation moyen
+                                        Délai d&apos;installation moyen
                                     </p>
                                 </div>
                             </MagicCard>
