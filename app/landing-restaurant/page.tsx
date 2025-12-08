@@ -12,7 +12,6 @@ import {
     Gift,
     Clock,
     Shield,
-    Sparkles,
     Check,
     Star,
     Phone,
@@ -61,11 +60,11 @@ export default function RestaurantsFetesPage() {
                 <AuroraBackground>
                     <div className="container mx-auto px-4 md:px-6 text-white flex flex-col justify-center items-center text-center relative z-10 pt-20">
                         <Badge className="relative top-2 lg:top-5 -rotate-8 bg-gradient-to-r from-amber-500 to-red-500 text-black">
-                            🎄 Offre Spéciale Fêtes de Fin d'Année 🎅
+                            🎄 Offre Spéciale Fêtes de Fin d&apos;Année 🎅
                         </Badge>
                         <h1 className="text-3xl md:text-4xl lg:text-6xl font-semibold leading-tight font-space-grostek mt-6">
                             <SparklesText
-                                colors={["#FFD700", "#FF6B6B", "#4ECDC4"]}
+                                colors={{ first: "#FFD700", second: "#FF6B6B" }}
                             >
                                 Boostez Votre Restaurant Pour Les Fêtes !
                             </SparklesText>
@@ -78,7 +77,7 @@ export default function RestaurantsFetesPage() {
                             Digitalisez votre restaurant pour la saison des
                             fêtes. <br />
                             <span className="text-amber-300 font-semibold">
-                                Service accéléré, moins d'erreurs, plus de
+                                Service accéléré, moins d&apos;erreurs, plus de
                                 ventes !
                             </span>
                         </p>
@@ -108,7 +107,8 @@ export default function RestaurantsFetesPage() {
                             </Link>
 
                             <p className="text-sm text-amber-100/70 mt-2">
-                                Réponse garantie dans l'heure • 01 66 36 03 00
+                                Réponse garantie dans l&apos;heure • 01 66 36 03
+                                00
                             </p>
                         </div>
                     </div>
@@ -140,7 +140,7 @@ export default function RestaurantsFetesPage() {
                                             size={24}
                                         />
                                     ),
-                                    title: "Files d'attente interminables",
+                                    title: "Files d&apos;attente interminables",
                                     description:
                                         "Les clients impatients partent chez la concurrence pendant les heures de pointe.",
                                 },
@@ -164,7 +164,7 @@ export default function RestaurantsFetesPage() {
                                     ),
                                     title: "Cuisine submergée",
                                     description:
-                                        "Les commandes s'accumulent, la qualité baisse, le service ralentit.",
+                                        "Les commandes s&apos;accumulent, la qualité baisse, le service ralentit.",
                                 },
                                 {
                                     icon: (
@@ -256,9 +256,9 @@ export default function RestaurantsFetesPage() {
                                         Menu Digital QR Code
                                     </h3>
                                     <p className="text-gray-300">
-                                        Plus besoin d'imprimer des menus ! Vos
-                                        clients scannent, consultent en ligne,
-                                        commandent directement.
+                                        Plus besoin d&apos;imprimer des menus !
+                                        Vos clients scannent, consultent en
+                                        ligne, commandent directement.
                                     </p>
                                 </div>
 
@@ -679,7 +679,7 @@ export default function RestaurantsFetesPage() {
                                     <p className="text-gray-300 mb-6">
                                         Parlez directement à notre expert
                                         restaurants. Réponse garantie dans
-                                        l'heure.
+                                        l&apos;heure.
                                     </p>
                                     <Link
                                         href={whatsappUrl}
@@ -709,7 +709,7 @@ export default function RestaurantsFetesPage() {
                                 />
                                 <h3 className="text-2xl md:text-3xl font-bold text-white mb-4">
                                     Ne ratez pas la saison la plus lucrative de
-                                    l'année !
+                                    l&apos;année !
                                 </h3>
                                 <p className="text-gray-300 text-lg mb-8 max-w-2xl mx-auto">
                                     Des dizaines de restaurants nous font déjà
@@ -746,7 +746,8 @@ export default function RestaurantsFetesPage() {
 
                                 <p className="text-amber-200/80 mt-6 text-sm">
                                     🎁 Offre spéciale : Installation avant le 15
-                                    décembre = 1 mois d'hébergement gratuit !
+                                    décembre = 1 mois d&apos;hébergement gratuit
+                                    !
                                 </p>
                             </div>
                         </div>
