@@ -93,7 +93,7 @@ export default function RestaurantsFetesPage() {
                                 </p>
                             </div>
 
-                            <a
+                            <Link
                                 href={whatsappUrl}
                                 target="_blank"
                                 rel="noopener noreferrer"
@@ -105,7 +105,7 @@ export default function RestaurantsFetesPage() {
                                     className="ml-3 group-hover:translate-x-2 transition-transform"
                                     size={20}
                                 />
-                            </a>
+                            </Link>
 
                             <p className="text-sm text-amber-100/70 mt-2">
                                 Réponse garantie dans l'heure • 01 66 36 03 00
@@ -562,7 +562,7 @@ export default function RestaurantsFetesPage() {
 
                                         {/* CTA Principal */}
                                         <div className="text-center">
-                                            <a
+                                            <Link
                                                 href={whatsappUrl}
                                                 target="_blank"
                                                 rel="noopener noreferrer"
@@ -577,7 +577,7 @@ export default function RestaurantsFetesPage() {
                                                     className="ml-3 group-hover:translate-x-2 transition-transform"
                                                     size={20}
                                                 />
-                                            </a>
+                                            </Link>
 
                                             <div className="flex items-center justify-center gap-4 text-sm text-gray-300">
                                                 <div className="flex items-center gap-2">
@@ -681,7 +681,7 @@ export default function RestaurantsFetesPage() {
                                         restaurants. Réponse garantie dans
                                         l'heure.
                                     </p>
-                                    <a
+                                    <Link
                                         href={whatsappUrl}
                                         target="_blank"
                                         rel="noopener noreferrer"
@@ -692,7 +692,7 @@ export default function RestaurantsFetesPage() {
                                             size={20}
                                         />
                                         01 66 36 03 00
-                                    </a>
+                                    </Link>
                                     <p className="text-sm text-gray-400 mt-4">
                                         Ou cliquez sur le bouton WhatsApp
                                     </p>
@@ -718,7 +718,7 @@ export default function RestaurantsFetesPage() {
                                 </p>
 
                                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                                    <a
+                                    <Link
                                         href={whatsappUrl}
                                         target="_blank"
                                         rel="noopener noreferrer"
@@ -733,15 +733,15 @@ export default function RestaurantsFetesPage() {
                                             className="ml-3 group-hover:translate-x-2 transition-transform"
                                             size={20}
                                         />
-                                    </a>
+                                    </Link>
 
-                                    <a
+                                    <Link
                                         href="tel:0166360300"
                                         className="inline-flex items-center justify-center bg-gradient-to-r from-amber-500 to-red-500 text-white rounded-full px-8 py-4 text-lg font-semibold hover:from-amber-600 hover:to-red-600 transition-all duration-300 shadow-xl hover:shadow-2xl"
                                     >
                                         <Phone className="mr-3" size={24} />
                                         Appeler maintenant
-                                    </a>
+                                    </Link>
                                 </div>
 
                                 <p className="text-amber-200/80 mt-6 text-sm">
