@@ -32,10 +32,10 @@ export const metadata: Metadata = {
         description:
             "Menu digital QR Code + Commande en ligne + Gestion des commandes. Offre spéciale fêtes à 300.000 FCFA.",
         type: "website",
-        url: "https://digitalinnovation.bj/restaurants-fetes",
+        url: "https://digitalinnovation.bj/landing-restaurant",
         images: [
             {
-                url: "/images/opengraph-restaurants.png",
+                url: "/images/opengraph.png",
                 width: 1200,
                 height: 630,
                 alt: "Solution Digital Restaurants - Digital Innovation",
