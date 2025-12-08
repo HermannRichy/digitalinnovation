@@ -96,12 +96,12 @@ export default function RestaurantsFetesPage() {
                                 href={whatsappUrl}
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="flex items-center justify-center bg-gradient-to-r from-green-500 to-green-600 text-white rounded-full px-8 py-4 text-lg font-semibold hover:from-green-600 hover:to-green-700 transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105 group"
+                                className="flex items-center justify-center gap-x-2 bg-gradient-to-r from-green-500 to-green-600 text-white rounded-full px-8 py-2 text-sm font-semibold hover:from-green-600 hover:to-green-700 transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105 group"
                             >
-                                <MessageCircle className="mr-3" size={24} />
+                                <MessageCircle size={20} />
                                 Discuter sur WhatsApp
                                 <MoveRight
-                                    className="ml-3 group-hover:translate-x-2 transition-transform"
+                                    className="group-hover:translate-x-2 transition-transform"
                                     size={20}
                                 />
                             </Link>
@@ -140,7 +140,7 @@ export default function RestaurantsFetesPage() {
                                             size={24}
                                         />
                                     ),
-                                    title: "Files d&apos;attente interminables",
+                                    title: "Files d'attente interminables",
                                     description:
                                         "Les clients impatients partent chez la concurrence pendant les heures de pointe.",
                                 },
@@ -164,7 +164,7 @@ export default function RestaurantsFetesPage() {
                                     ),
                                     title: "Cuisine submergée",
                                     description:
-                                        "Les commandes s&apos;accumulent, la qualité baisse, le service ralentit.",
+                                        "Les commandes s'accumulent, la qualité baisse, le service ralentit.",
                                 },
                                 {
                                     icon: (
@@ -244,7 +244,7 @@ export default function RestaurantsFetesPage() {
                         </div>
 
                         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
-                            <MagicCard className="rounded-3xl p-8 border border-amber-500/30 bg-gradient-to-br from-amber-950/20 to-dark">
+                            <MagicCard className="rounded-3xl p-6 border border-amber-500/30 bg-gradient-to-br from-amber-950/20 to-dark">
                                 <div className="text-center mb-8">
                                     <div className="w-20 h-20 rounded-full bg-gradient-to-r from-amber-500 to-red-500 flex items-center justify-center mx-auto mb-6">
                                         <QrCode
@@ -566,20 +566,19 @@ export default function RestaurantsFetesPage() {
                                                 href={whatsappUrl}
                                                 target="_blank"
                                                 rel="noopener noreferrer"
-                                                className="inline-flex items-center justify-center bg-gradient-to-r from-green-500 to-green-600 text-white rounded-full px-8 py-4 text-lg font-semibold hover:from-green-600 hover:to-green-700 transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105 group w-full mb-4"
+                                                className="inline-flex items-center justify-center gap-x-2 bg-gradient-to-r from-green-500 to-green-600 text-white rounded-full px-8 py-2 text-sm font-semibold hover:from-green-600 hover:to-green-700 transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105 group w-full mb-4"
                                             >
                                                 <MessageCircle
-                                                    className="mr-3"
-                                                    size={24}
+                                                    size={20}
                                                 />
                                                 Commander maintenant
                                                 <MoveRight
-                                                    className="ml-3 group-hover:translate-x-2 transition-transform"
+                                                    className="group-hover:translate-x-2 transition-transform"
                                                     size={20}
                                                 />
                                             </Link>
 
-                                            <div className="flex items-center justify-center gap-4 text-sm text-gray-300">
+                                            <div className="flex items-center justify-center gap-4 text-xs text-gray-300">
                                                 <div className="flex items-center gap-2">
                                                     <Shield
                                                         className="text-amber-400"
@@ -599,22 +598,6 @@ export default function RestaurantsFetesPage() {
                                                     </span>
                                                 </div>
                                             </div>
-
-                                            <Alert className="mt-6 border-amber-500/30 bg-amber-950/20">
-                                                <PartyPopper
-                                                    className="text-amber-400"
-                                                    size={16}
-                                                />
-                                                <AlertDescription className="text-amber-200">
-                                                    <strong>
-                                                        Offre spéciale fêtes :
-                                                    </strong>{" "}
-                                                    Les 10 premiers restaurants
-                                                    bénéficient d&apos;une
-                                                    séance photo gratuite de
-                                                    leurs plats !
-                                                </AlertDescription>
-                                            </Alert>
                                         </div>
                                     </div>
                                 </div>
@@ -685,7 +668,7 @@ export default function RestaurantsFetesPage() {
                                         href={whatsappUrl}
                                         target="_blank"
                                         rel="noopener noreferrer"
-                                        className="inline-flex items-center justify-center bg-gradient-to-r from-green-500 to-green-600 text-white rounded-full px-6 py-3 font-semibold hover:from-green-600 hover:to-green-700 transition-all duration-300"
+                                        className="inline-flex items-center justify-center bg-gradient-to-r from-green-500 to-green-600 text-white rounded-full px-8 py-2 font-semibold hover:from-green-600 hover:to-green-700 transition-all duration-300"
                                     >
                                         <MessageCircle
                                             className="mr-2"
@@ -722,33 +705,26 @@ export default function RestaurantsFetesPage() {
                                         href={whatsappUrl}
                                         target="_blank"
                                         rel="noopener noreferrer"
-                                        className="inline-flex items-center justify-center bg-gradient-to-r from-green-500 to-green-600 text-white rounded-full px-8 py-4 text-lg font-semibold hover:from-green-600 hover:to-green-700 transition-all duration-300 shadow-xl hover:shadow-2xl hover:scale-105 group"
+                                        className="inline-flex items-center justify-center gap-x-2 bg-gradient-to-r from-green-500 to-green-600 text-white rounded-full px-8 py-2 text-sm font-semibold hover:from-green-600 hover:to-green-700 transition-all duration-300 shadow-xl hover:shadow-2xl hover:scale-105 group"
                                     >
                                         <MessageCircle
-                                            className="mr-3"
                                             size={24}
                                         />
                                         Discuter avec un expert
                                         <MoveRight
-                                            className="ml-3 group-hover:translate-x-2 transition-transform"
+                                            className="group-hover:translate-x-2 transition-transform"
                                             size={20}
                                         />
                                     </Link>
 
                                     <Link
                                         href="tel:0166360300"
-                                        className="inline-flex items-center justify-center bg-gradient-to-r from-amber-500 to-red-500 text-white rounded-full px-8 py-4 text-lg font-semibold hover:from-amber-600 hover:to-red-600 transition-all duration-300 shadow-xl hover:shadow-2xl"
+                                        className="inline-flex items-center justify-center bg-gradient-to-r from-amber-500 to-red-500 text-white rounded-full px-8 py-2 text-sm font-semibold hover:from-amber-600 hover:to-red-600 transition-all duration-300 shadow-xl hover:shadow-2xl"
                                     >
-                                        <Phone className="mr-3" size={24} />
+                                        <Phone className="mr-2" size={24} />
                                         Appeler maintenant
                                     </Link>
                                 </div>
-
-                                <p className="text-amber-200/80 mt-6 text-sm">
-                                    🎁 Offre spéciale : Installation avant le 15
-                                    décembre = 1 mois d&apos;hébergement gratuit
-                                    !
-                                </p>
                             </div>
                         </div>
                     </div>
