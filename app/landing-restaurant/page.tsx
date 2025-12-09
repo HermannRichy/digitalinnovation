@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+"use client";
 import Link from "next/link";
 import {
     MoveRight,
@@ -22,29 +22,36 @@ import { MagicCard } from "@/src/components/magicui/magic-card";
 import { AuroraBackground } from "@/src/components/ui/aurora-background";
 import { Badge } from "@/src/components/ui/badge";
 import { Footer } from "@/src/components/sections/Footer";
-
-export const metadata: Metadata = {
-    title: "Solution Digital Restaurants - Boostez vos ventes pour les fêtes | Digital Innovation",
-    description:
-        "Menu digital QR Code + Commande en ligne + Gestion des commandes. Offre spéciale fêtes à 300.000 FCFA. Transformez votre restaurant pour la saison des fêtes !",
-    openGraph: {
-        title: "Solution Digital Restaurants - Boostez vos ventes pour les fêtes | Digital Innovation",
-        description:
-            "Menu digital QR Code + Commande en ligne + Gestion des commandes. Offre spéciale fêtes à 300.000 FCFA.",
-        type: "website",
-        url: "https://digitalinnovation.bj/landing-restaurant",
-        images: [
-            {
-                url: "/images/opengraph.png",
-                width: 1200,
-                height: 630,
-                alt: "Solution Digital Restaurants - Digital Innovation",
-            },
-        ],
-    },
-};
+import { useMetaPixel } from "@/src/hooks/useMetaPixel";
+import React, { useEffect } from "react";
 
 export default function RestaurantsFetesPage() {
+    const { trackEvent, trackLead, trackContact } = useMetaPixel();
+
+    // Track page view on component mount
+    useEffect(() => {
+        trackEvent("PageView", { page: "Landing Restaurant" });
+    }, [trackEvent]);
+
+    const handleContactClick = (element: string = "whatsapp_button") => {
+        trackContact({
+            action: "click",
+            element,
+            page: "Landing Restaurant",
+            url: typeof window !== "undefined" ? window.location.href : "",
+        });
+    };
+
+    const handleLeadClick = (source: string, element: string = "") => {
+        trackLead({
+            source,
+            action: "click",
+            element,
+            page: "Landing Restaurant",
+            url: typeof window !== "undefined" ? window.location.href : "",
+        });
+    };
+
     const whatsappNumber = "2290166360300";
     const whatsappMessage =
         "Bonjour ! Je suis intéressé(e) par la solution digitale pour mon restaurant. Pouvez-vous m'en dire plus ?";
@@ -95,7 +102,11 @@ export default function RestaurantsFetesPage() {
                                 href={whatsappUrl}
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="flex items-center justify-center gap-x-2 bg-gradient-to-r from-green-500 to-green-600 text-white rounded-full px-8 py-2 text-sm font-semibold hover:from-green-600 hover:to-green-700 transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105 group"
+                                onClick={() => {
+                                    handleContactClick("whatsapp_button");
+                                    handleLeadClick("whatsapp_button");
+                                }}
+                                className="inline-flex items-center justify-center gap-2 px-6 py-3 text-sm font-medium text-white transition-colors bg-green-600 rounded-md hover:bg-green-700 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-green-500"
                             >
                                 <MessageCircle size={20} />
                                 Discuter sur WhatsApp
@@ -567,9 +578,7 @@ export default function RestaurantsFetesPage() {
                                                 rel="noopener noreferrer"
                                                 className="inline-flex items-center justify-center gap-x-2 bg-gradient-to-r from-green-500 to-green-600 text-white rounded-full px-8 py-2 text-sm font-semibold hover:from-green-600 hover:to-green-700 transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105 group w-full mb-4"
                                             >
-                                                <MessageCircle
-                                                    size={20}
-                                                />
+                                                <MessageCircle size={20} />
                                                 Commander maintenant
                                                 <MoveRight
                                                     className="group-hover:translate-x-2 transition-transform"
@@ -706,9 +715,7 @@ export default function RestaurantsFetesPage() {
                                         rel="noopener noreferrer"
                                         className="inline-flex items-center justify-center gap-x-2 bg-gradient-to-r from-green-500 to-green-600 text-white rounded-full px-8 py-2 text-sm font-semibold hover:from-green-600 hover:to-green-700 transition-all duration-300 shadow-xl hover:shadow-2xl hover:scale-105 group"
                                     >
-                                        <MessageCircle
-                                            size={24}
-                                        />
+                                        <MessageCircle size={24} />
                                         Discuter avec un expert
                                         <MoveRight
                                             className="group-hover:translate-x-2 transition-transform"
