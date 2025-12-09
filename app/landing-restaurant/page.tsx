@@ -26,17 +26,15 @@ import { useMetaPixel } from "@/src/hooks/useMetaPixel";
 import React, { useEffect } from "react";
 
 export default function RestaurantsFetesPage() {
-    const { trackEvent, trackLead, trackContact } = useMetaPixel();
+    const { trackEvent, trackLead, trackWhatsAppClick } = useMetaPixel();
 
     // Track page view on component mount
     useEffect(() => {
         trackEvent("PageView", { page: "Landing Restaurant" });
     }, [trackEvent]);
 
-    const handleContactClick = (element: string = "whatsapp_button") => {
-        trackContact({
-            action: "click",
-            element,
+    const handleWhatsAppClick = (location: string) => {
+        trackWhatsAppClick(location, {
             page: "Landing Restaurant",
             url: typeof window !== "undefined" ? window.location.href : "",
         });
@@ -102,10 +100,9 @@ export default function RestaurantsFetesPage() {
                                 href={whatsappUrl}
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                onClick={() => {
-                                    handleContactClick("whatsapp_button");
-                                    handleLeadClick("whatsapp_button");
-                                }}
+                                onClick={() =>
+                                    handleWhatsAppClick("Hero Section")
+                                }
                                 className="inline-flex items-center justify-center gap-2 px-6 py-3 text-sm font-medium text-white transition-colors bg-green-600 rounded-md hover:bg-green-700 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-green-500"
                             >
                                 <MessageCircle size={20} />
@@ -576,6 +573,11 @@ export default function RestaurantsFetesPage() {
                                                 href={whatsappUrl}
                                                 target="_blank"
                                                 rel="noopener noreferrer"
+                                                onClick={() =>
+                                                    handleWhatsAppClick(
+                                                        "Pricing Section"
+                                                    )
+                                                }
                                                 className="inline-flex items-center justify-center gap-x-2 bg-gradient-to-r from-green-500 to-green-600 text-white rounded-full px-8 py-2 text-sm font-semibold hover:from-green-600 hover:to-green-700 transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105 group w-full mb-4"
                                             >
                                                 <MessageCircle size={20} />
@@ -676,6 +678,11 @@ export default function RestaurantsFetesPage() {
                                         href={whatsappUrl}
                                         target="_blank"
                                         rel="noopener noreferrer"
+                                        onClick={() =>
+                                            handleWhatsAppClick(
+                                                "Contact Section"
+                                            )
+                                        }
                                         className="inline-flex items-center justify-center bg-gradient-to-r from-green-500 to-green-600 text-white rounded-full px-8 py-2 font-semibold hover:from-green-600 hover:to-green-700 transition-all duration-300"
                                     >
                                         <MessageCircle
@@ -713,6 +720,9 @@ export default function RestaurantsFetesPage() {
                                         href={whatsappUrl}
                                         target="_blank"
                                         rel="noopener noreferrer"
+                                        onClick={() =>
+                                            handleWhatsAppClick("Final CTA")
+                                        }
                                         className="inline-flex items-center justify-center gap-x-2 bg-gradient-to-r from-green-500 to-green-600 text-white rounded-full px-8 py-2 text-sm font-semibold hover:from-green-600 hover:to-green-700 transition-all duration-300 shadow-xl hover:shadow-2xl hover:scale-105 group"
                                     >
                                         <MessageCircle size={24} />

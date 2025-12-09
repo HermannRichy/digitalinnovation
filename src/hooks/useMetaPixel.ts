@@ -44,15 +44,56 @@ export function useMetaPixel() {
     );
 
     const trackContact = useCallback(
-        (data?: Record<string, unknown>) => {
-            trackEvent("Contact", data);
+        (data: Record<string, unknown> = {}) => {
+            const defaultData = {
+                content_name: document.title,
+                content_category: "Contact",
+                content_ids: ["whatsapp_contact"],
+                content_type: "button_click",
+                value: 1,
+                currency: "XOF",
+                ...data,
+            };
+
+            // Envoi de l'événement standard Contact
+            trackEvent("Contact", defaultData);
+
+            // Événement personnalisé pour le suivi détaillé
+            trackEvent("WhatsAppClick", {
+                ...defaultData,
+                eventID: `wa_${Date.now()}`,
+                eventTime: new Date().toISOString(),
+                userAgent:
+                    typeof window !== "undefined"
+                        ? window.navigator.userAgent
+                        : "",
+                pageUrl:
+                    typeof window !== "undefined" ? window.location.href : "",
+            });
         },
         [trackEvent]
+    );
+
+    const trackWhatsAppClick = useCallback(
+        (
+            buttonLocation: string,
+            additionalData: Record<string, unknown> = {}
+        ) => {
+            trackContact({
+                button_location: buttonLocation,
+                button_id: `wa_${buttonLocation
+                    .toLowerCase()
+                    .replace(/\s+/g, "_")}`,
+                ...additionalData,
+            });
+        },
+        [trackContact]
     );
 
     return {
         trackEvent,
         trackLead,
         trackContact,
+        trackWhatsAppClick,
     };
 }
