@@ -40,16 +40,6 @@ export default function RestaurantsFetesPage() {
         });
     };
 
-    const handleLeadClick = (source: string, element: string = "") => {
-        trackLead({
-            source,
-            action: "click",
-            element,
-            page: "Landing Restaurant",
-            url: typeof window !== "undefined" ? window.location.href : "",
-        });
-    };
-
     const whatsappNumber = "2290166360300";
     const whatsappMessage =
         "Bonjour ! Je suis intéressé(e) par la solution digitale pour mon restaurant. Pouvez-vous m'en dire plus ?";
