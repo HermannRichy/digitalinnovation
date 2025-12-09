@@ -26,7 +26,7 @@ import { useMetaPixel } from "@/src/hooks/useMetaPixel";
 import React, { useEffect } from "react";
 
 export default function RestaurantsFetesPage() {
-    const { trackEvent, trackLead, trackWhatsAppClick } = useMetaPixel();
+    const { trackEvent, trackWhatsAppClick } = useMetaPixel();
 
     // Track page view on component mount
     useEffect(() => {
